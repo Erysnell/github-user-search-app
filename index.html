@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <title>Frontend Mentor | GitHub user search app</title>
+
+  <!--google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <!--google font end -->
+
+  <!-- stylesheet and script -->
+  <link rel="stylesheet" href="style.css">
+  <!-- stylesheet and script end -->
+
+</head>
+<body>
+  <div class="container-wrapper">
+    <main class="container" role="main">
+  
+      <!-- header starts here -->
+      <header class="header" role="banner">
+        <h1 class="title">devfinder</h1>
+        <div class="btn-mode" id="themeChangeBtn" role="button" aria-label="Toggle theme">
+          <p id="themeName">DARK</p>
+          <img id="moonIcon" src="./assets/icon-moon.svg" alt="Moon Icon">
+        </div>
+      </header>
+      <!-- header ends here -->
+
+      <!-- user not fount message -->
+      <p class="user-not-found" id="userNotFound" role="alert" aria-live="polite">User not found</p>
+
+      <!-- search bar starts here -->
+      <div class="search-bar" role="search">
+        <div class="search-icon">
+          <img src="./assets/icon-search.svg" alt="Search Icon">
+        </div>
+        <input type="search" placeholder="Search GitHub Username..." maxlength="39" class="search-area" id="searchArea" aria-label="Search GitHub username">
+        <button class="search-btn" id="searchBtn" aria-label="Search">Search</button>
+      </div>
+      <!-- search bar ends here -->
+  
+      <!-- user information container starts here -->
+      <article class="user-information-container" role="article">
+  
+        <!-- user profile img -->
+        <div class="user-profile-img-container">
+          <img src="./assets/octocat.png" alt="Octocat Profile Image" class="profile-img" id="profileImg">
+        </div>
+  
+        <div class="profile-information">
+  
+          <!-- user name and join date container starts here -->
+          <section class="user-basic-detail">
+            <div class="mobile-user-img">
+              <img src="./assets/octocat.png" alt="Octocat Profile Image" class="profile-img" id="profileImgMobile">
+            </div>
+            <div class="user-name-container">
+              <div>
+                <p class="user-name" id="userName">The Octocat</p>
+                <a href="https://github.com/octocat" target="_blank" class="user-id" id="userId" rel="noopener">@octocat</a>
+              </div>
+              <div class="joined-date-continer">
+                <p>Joined</p>
+                <p id="joinDate">25</p>
+                <p id="joinMonth">Jan</p>
+                <p id="joinYear">2011</p>
+              </div>
+            </div>
+          </section>
+          <!-- user name and join date container ends here -->
+  
+          <!-- user bio -->
+          <p class="user-bio" id="userBio" role="contentinfo">This profile has no bio</p>
+  
+          <!-- user work information container starts here -->
+          <section class="user-work-information" aria-label="User statistics">
+            <div class="repo-container">
+              <p>Repos</p>
+              <p class="repos" id="userRepo">8</p>
+            </div>
+            <div class="followers-container">
+              <p>Followers</p>
+              <p class="followers" id="userFollowers">3938</p>
+            </div>
+            <div class="following-container">
+              <p>Following</p>
+              <p class="following" id="userFollowing">9</p>
+            </div>
+          </section>
+          <!-- user work information container ends here -->
+  
+          <!-- user links container starts here -->
+          <section class="user-links" aria-label="Contact information">
+            <div>
+              <div class="user-location">
+                <img src="./assets/icon-location.svg" alt="Location Icon">
+                <p id="userLocation">San Francisco</p>
+              </div>
+              <div class="user-website-link">
+                <img src="./assets/icon-website.svg" alt="Website Icon">
+                <p><a href="https://github.blog" target="_blank" id="userWebsite" rel="noopener">github.blog</a></p>
+              </div>
+            </div>
+            <div>
+              <div class="user-twitter-link">
+                <img src="./assets/icon-twitter.svg" alt="Twitter Icon" id="twitterIcon">
+                <a href="#" target="_blank" id="userTwitterName" rel="noopener">Not available</a>
+              </div>
+              <div class="user-company">
+                <img src="./assets/icon-company.svg" alt="Company Icon">
+                <p id="userCompany">@github</p>
+              </div>
+            </div>
+          </section>
+          <!-- user links container ends here -->
+  
+        </div>
+      </article>
+      <!-- user information container ends here -->
+      <script src="script.js"></script>
+    </main>
+  </div>
+</body>
+</html>
